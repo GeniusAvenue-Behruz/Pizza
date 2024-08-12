@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  @apply box-border m-0 p-0;
+  font-family: "Inter";
+}
+.header .alert-box {
+  @apply flex justify-between items-center px-0 py-2.5 border-b-[#F0F0F0] border-b border-solid;
+}
+.header .alert-box ul {
+  @apply flex justify-center items-center gap-10;
+  list-style: none;
+}
+.header .alert-box ul li {
+  @apply flex items-center;
+}
+.header .alert-box ul li img {
+  @apply w-5 h-5 mr-2;
+}
+.header .nav {
+  @apply flex justify-between items-center px-0 py-4;
+}
+.header .nav .nav-logo {
+  /* pass */
+}
+.header .nav button {
+  @apply w-[90px] h-10 rounded text-base leading-[22px] text-[white] bg-[#FF7010] flex justify-between items-center px-4 py-2 border-[none];
+  outline: none;
+}
+.container {
+  @apply max-w-[1400px] w-full mx-auto my-0;
+}
+main {
+  @apply bg-[#e5e5e575] pb-[60px];
+}
+main .slider {
+  @apply flex justify-between items-center px-0 py-[30px];
+}
+main .slider a {
+  @apply text-[#191919] no-underline focus:text-[#E23535];
+}
+main .slider .slider-box {
+  @apply text-lg w-[135px] h-[100px] border bg-[white] flex justify-center items-center flex-col rounded-xl border-solid border-[#F0F0F0];
+}
+main .slider .slider-box img {
+  /* display: block; */
+}
+main .pizza-items {
+  @apply grid grid-cols-[auto_auto_auto_auto];
+}
+/* margin-bottom: 30px; */
+main .pizza-items .pizza-item {
+  @apply w-[300px] h-[343px] relative rounded-xl;
+}
+main .pizza-items .pizza-item img {
+  @apply w-[inherit] h-[inherit] absolute;
+}
+main .pizza-items .pizza-item span {
+  @apply w-60 absolute text-xl font-semibold text-[white] left-5 bottom-5;
+}
+main form {
+  @apply bg-white border flex justify-between items-center mx-auto my-[30px] px-8 py-4 rounded-lg border-solid border-[#F0F0F0];
+}
+main form .input {
+  @apply flex items-center border w-[780px] px-3 py-3.5 rounded-md border-solid border-[#F0F0F0];
+}
+main form .input img {
+  @apply mr-2;
+}
+main form .input input {
+  @apply w-full h-full border-[none];
+  outline: none;
+}
+main form button {
+  @apply bg-[#FF7010] w-[150px] h-12 text-white text-base px-8 py-[13px] rounded-md border-[none];
+  outline: none;
+}
+main .component {
+  @apply mb-[46px];
+}
+main .component .section__header {
+  @apply flex justify-between items-center mb-8;
+}
+main .component .section__header h1 {
+  @apply text-[40px] font-semibold leading-[48px];
+}
+main .component .section__header button {
+  @apply w-[126px] h-10 flex justify-center items-center border bg-white px-4 py-3 rounded-md border-solid border-[#F0F0F0];
+  outline: none;
+}
+main .component .section__header button img {
+  @apply mr-2;
+}
+main .component .section__grid {
+  @apply grid gap-[30px_28px] grid-cols-[repeat(4,1fr)];
+}
+main .component .section__grid .section__grid-item {
+  @apply relative w-[300px] h-[480px] bg-[white] rounded-xl;
+}
+main .component .section__grid .section__grid-item .red-label {
+  @apply absolute w-[65px] uppercase h-8 text-[white] text-sm bg-[#E23535] px-4 py-[7px] rounded-[0_6px_6px_0] top-5;
+}
+main .component .section__grid .section__grid-item img {
+  @apply block w-[inherit];
+}
+main .component .section__grid .section__grid-item .grid-item__text {
+  @apply p-5;
+}
+main .component .section__grid .section__grid-item .grid-item__text h3 {
+  @apply text-lg leading-6 mb-3;
+}
+main .component .section__grid .section__grid-item .grid-item__text p {
+  @apply text-base leading-[22px] mb-4;
+}
+main .component .section__grid .section__grid-item .grid-item__text .buttons {
+  @apply flex justify-between items-center;
+}
+main
+  .component
+  .section__grid
+  .section__grid-item
+  .grid-item__text
+  .buttons
+  button {
+  @apply w-[131px] h-12 text-[white] bg-[#FF7010] rounded-md border-[none];
+  outline: none;
+}
+main
+  .component
+  .section__grid
+  .section__grid-item
+  .grid-item__text
+  .buttons
+  span {
+  @apply text-[#FF7010] text-lg leading-6 font-bold;
+}
+main .disclaimer {
+  @apply max-w-[850px] w-full mt-6;
+}
+main .disclaimer h1 {
+  @apply text-[32px] leading-10 font-bold mb-4;
+}
+main .disclaimer p {
+  @apply text-base leading-[22px] border relative mb-4 after:content-[""] after:absolute after:z-[1] after:pointer-events-none after:bg-[linear-gradient(to_bottom,transparent,rgba(255,255,255,1)_90%)] after:w-full after:h-[10em] after:left-0 after:bottom-0;
+}
+main .disclaimer a {
+  @apply text-base text-[#FF7010] no-underline;
+}
+.footer {
+  @apply px-0 py-8;
+}
